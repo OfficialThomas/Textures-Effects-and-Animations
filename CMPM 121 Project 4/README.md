@@ -1,26 +1,34 @@
-# Unity Map
-CMPM 121 Assignment 3
+# Unity Shaders and Animators
+CMPM 121 Assignment 4
 
-1. An improved character controller.\
+1. Create at least one shader graph and apply it to an object in the game.\
     Status: Complete.\
-    Player character is able to move using wasd and change the camera direction to move freely. The player is also able to shoot with the left mouse button.
+    All objects in the scene have a shader graph applied to them.
 	
-2. A designed level.\
+2. Create at least one "local" particle effect.\
     Status: Complete.\
-    The area contains buildings and follows 4 different level design tips. These include:
-	- Utilize Landmarks: I decided to have fun building a giant tower. The tower gives the player a point of reference and sticks out compared to all of the shorter objects in the scene.
-	- Place Kodak Picture Spots: Ultilizing the tower, I thought it would be cool to have a nice sunset. This view gives the player a sense of a larger world without having to design any of it.
-	- Make use of breadcrumbs: Placing coins around the tower tells the player that they have more than one place they can go for some kind of reward. These coins are also used to guide the player to the top platform of the tower.
-	- Use lighting intentionally: I made sure to have a sunset to have the scene be a comfortable dark. Using this, I was able to emphasize the lighting inside of the houses, making players want to explore into these spaces.
+    Game contains a campfire that consists of "local" fire and smoke particles. 
 
-3. Baked and realtime lights.\
+3. Create at least one "global" particle effect.\
     Status: Complete.\
-    Lighting inside of the houses are only baked lights. The directional light is using the mixed setting, being dynamic for the player, enemies and collectables, and baked for the enviroment.
+    Rain particle generator is a child of the camera, making the whole scene rain during play.
 
-4. Use a NavMeshAgent.\
+4. Create at least one "local" post-processing effect.\
     Status: Complete.\
-    Enemy character is present in the game and will approach player if close enough.
+    Box volume is present near the campfire to give off a heated effect.
 	
-5. A unique manipulation.\
-	Status: Incomplete.\
-	No unique manipulation this week.
+5. Create at least one "global" post-processing effect.\
+	Status: Complete.\
+	The "global" effect consists of the depth of field, making everything but the player blurry.
+	
+6. Walking Animation.\
+	Status: Complete.\
+	Player will use walking animation when moving.
+
+7. Idle Animation.\
+	Status: Complete.\
+	Player will use idle animation when standing still.
+	
+8. Unique Manipulation.\
+	Status: Complete.\
+	I created multiple shader graphs, giving the scene a "static" old tv aesthetic to all of the objects in the game.

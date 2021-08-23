@@ -8,7 +8,7 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject _bullet;
     private CharacterController _characterController;
     private Camera _currentCamera;
-
+    private Animator _anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,8 @@ public class PlayerBehavior : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
 
         _currentCamera = Camera.main;
+
+        _anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -53,6 +55,15 @@ public class PlayerBehavior : MonoBehaviour
         movement *= _moveSpeed * Time.deltaTime;
         _characterController.SimpleMove(movement);
 
+        //animate
+        if (movement.magnitude > 0)
+        {
+            _anim.SetBool("isWalking", true);
+        } else
+        {
+            _anim.SetBool("isWalking", false);
+        }
+        
     }
 
 }
